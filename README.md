@@ -1,4 +1,4 @@
-# React Todo List - Learn
+# React Todo List - ***Plan and Learn***
 
 A simple Todo List application built with **React** and **React-Bootstrap**.
 
