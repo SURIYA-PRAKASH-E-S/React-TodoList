@@ -1,13 +1,52 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, #172554 0%, transparent 30%),
+    radial-gradient(circle at 80% 20%, #2e1065 0%, transparent 30%),
+    linear-gradient(135deg, #020617, #0f172a, #030712);
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Glowing border */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 8px;
+  border: 1px solid rgba(96, 165, 250, .35);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(59, 130, 246, .12);
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body { background-attachment: scroll; }
+  body::before { inset: 5px; border-radius: 12px; }
+}
+
+/* Small devices */
+@media (max-width: 480px) {
+  body::before { inset: 3px; border-radius: 10px; }
+}
+
+/* github header */
+
+.github-header {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 1000;
+}
+
+.github-header a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.github-header a:hover {
+  color: #ddd;
 }
